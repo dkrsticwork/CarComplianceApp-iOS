@@ -1,0 +1,71 @@
+import Foundation
+
+let CAR_MAKES: [String] = [
+    "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW", "Bugatti",
+    "BYD", "Chery", "Chevrolet", "Chrysler", "Citroën", "Cupra",
+    "Dacia", "Daihatsu", "Dodge", "DS Automobiles", "Ferrari", "Fiat",
+    "Ford", "Geely", "GMC", "Great Wall", "Haval", "Honda", "Hyundai",
+    "Infiniti", "Isuzu", "Jaguar", "Jeep", "Kia", "Lada", "Lamborghini",
+    "Lancia", "Land Rover", "Lexus", "Lincoln", "Lotus", "Lucid",
+    "Mahindra", "Maserati", "Mazda", "McLaren", "Mercedes-Benz", "MG",
+    "MINI", "Mitsubishi", "Nissan", "Opel", "Peugeot", "Porsche",
+    "Proton", "Ram", "Renault", "Rivian", "Rolls-Royce", "Seat",
+    "Škoda", "Smart", "SsangYong", "Subaru", "Suzuki", "Tata", "Tesla",
+    "Toyota", "Vauxhall", "Volkswagen", "Volvo", "Zastava", "Yugo"
+].sorted()
+
+let CAR_MODELS: [String: [String]] = [
+    "Alfa Romeo": ["Giulia", "Giulietta", "Stelvio", "Tonale", "4C", "147", "156", "159", "MiTo"],
+    "Audi": ["A1", "A3", "A4", "A5", "A6", "A7", "A8", "Q2", "Q3", "Q5", "Q7", "Q8", "TT", "R8", "e-tron GT", "RS3", "RS6"],
+    "BMW": ["1 Series", "2 Series", "3 Series", "4 Series", "5 Series", "7 Series", "X1", "X3", "X5", "X6", "X7", "iX", "i4", "i5", "i7", "M3", "M4", "M5", "Z4"],
+    "Citroën": ["C1", "C3", "C3 Aircross", "C4", "C5 Aircross", "Berlingo", "SpaceTourer"],
+    "Cupra": ["Ateca", "Born", "Formentor", "Leon", "Tavascan"],
+    "Dacia": ["Duster", "Jogger", "Logan", "Sandero", "Spring", "Bigster"],
+    "Fiat": ["500", "500X", "500L", "Tipo", "Panda", "Doblo", "Grande Punto"],
+    "Ford": ["Fiesta", "Focus", "Mondeo", "Mustang", "Puma", "Kuga", "EcoSport", "Ranger", "F-150", "Transit", "Galaxy"],
+    "Honda": ["Civic", "Accord", "Jazz", "CR-V", "HR-V", "Fit", "City", "e", "ZR-V"],
+    "Hyundai": ["i10", "i20", "i30", "Elantra", "Sonata", "Tucson", "Santa Fe", "Kona", "IONIQ 5", "IONIQ 6"],
+    "Kia": ["Picanto", "Rio", "Ceed", "Sportage", "Sorento", "Stinger", "Niro", "EV6", "EV9", "Soul"],
+    "Lada": ["Vesta", "Granta", "Niva", "Niva Legend", "2101", "2105", "2107", "Samara", "Kalina"],
+    "Land Rover": ["Defender", "Discovery", "Discovery Sport", "Freelander", "Range Rover", "Range Rover Evoque", "Range Rover Sport"],
+    "Lexus": ["CT", "ES", "GS", "IS", "LS", "NX", "RX", "GX", "LX", "UX", "RZ"],
+    "Mazda": ["Mazda2", "Mazda3", "Mazda6", "CX-3", "CX-30", "CX-5", "CX-60", "MX-5", "MX-30"],
+    "Mercedes-Benz": ["A-Class", "B-Class", "C-Class", "E-Class", "S-Class", "CLA", "GLA", "GLC", "GLE", "GLS", "EQA", "EQC", "EQE", "EQS", "G-Class", "AMG GT"],
+    "MINI": ["Cooper", "Cooper S", "Clubman", "Countryman", "Convertible", "Aceman"],
+    "Mitsubishi": ["Colt", "Eclipse Cross", "Outlander", "ASX", "Pajero", "L200", "Space Star"],
+    "Nissan": ["Micra", "Juke", "Qashqai", "X-Trail", "Leaf", "Ariya", "370Z", "GT-R", "Navara"],
+    "Opel": ["Astra", "Corsa", "Insignia", "Mokka", "Crossland", "Grandland", "Zafira"],
+    "Peugeot": ["108", "208", "2008", "308", "3008", "408", "5008", "508", "Partner", "Rifter"],
+    "Porsche": ["911", "718 Boxster", "718 Cayman", "Cayenne", "Macan", "Panamera", "Taycan"],
+    "Renault": ["Clio", "Megane", "Captur", "Austral", "Arkana", "Scenic", "Zoe", "Twingo", "Kangoo"],
+    "Seat": ["Ibiza", "Leon", "Arona", "Ateca", "Tarraco", "Alhambra"],
+    "Škoda": ["Fabia", "Scala", "Octavia", "Superb", "Kamiq", "Karoq", "Kodiaq", "Enyaq", "Rapid", "Yeti"],
+    "Subaru": ["Impreza", "Outback", "Forester", "XV", "BRZ", "WRX", "Solterra"],
+    "Suzuki": ["Alto", "Swift", "Vitara", "S-Cross", "Jimny", "SX4"],
+    "Tesla": ["Model 3", "Model Y", "Model S", "Model X", "Cybertruck"],
+    "Toyota": ["Aygo", "Yaris", "Corolla", "Camry", "C-HR", "RAV4", "Land Cruiser", "Hilux", "Prius", "bZ4X", "GR86", "Supra"],
+    "Volkswagen": ["Polo", "Golf", "Passat", "Arteon", "Tiguan", "Touareg", "T-Cross", "T-Roc", "ID.3", "ID.4", "ID.5", "ID.7", "Caddy", "Up"],
+    "Volvo": ["S60", "S90", "V60", "V90", "XC40", "XC60", "XC90", "EX30", "EX40", "EX90"],
+    "Zastava": ["10", "101", "128", "750", "Skala", "Florida"],
+    "Yugo": ["45", "55", "60", "65", "GV", "Sana"],
+]
+
+let DEFAULT_MODELS = ["Standard", "Comfort", "Sport", "LX", "EX", "SE", "Premium", "Base", "Limited", "Touring"]
+
+let COUNTRIES: [(code: String, display: String)] = [
+    ("AL", "Albania 🇦🇱"), ("AT", "Austria 🇦🇹"), ("BY", "Belarus 🇧🇾"), ("BE", "Belgium 🇧🇪"),
+    ("BA", "Bosnia & Herzegovina 🇧🇦"), ("BG", "Bulgaria 🇧🇬"), ("HR", "Croatia 🇭🇷"),
+    ("CY", "Cyprus 🇨🇾"), ("CZ", "Czech Republic 🇨🇿"), ("DK", "Denmark 🇩🇰"),
+    ("EE", "Estonia 🇪🇪"), ("FI", "Finland 🇫🇮"), ("FR", "France 🇫🇷"), ("DE", "Germany 🇩🇪"),
+    ("GR", "Greece 🇬🇷"), ("HU", "Hungary 🇭🇺"), ("IS", "Iceland 🇮🇸"), ("IE", "Ireland 🇮🇪"),
+    ("IT", "Italy 🇮🇹"), ("XK", "Kosovo 🇽🇰"), ("LV", "Latvia 🇱🇻"), ("LT", "Lithuania 🇱🇹"),
+    ("LU", "Luxembourg 🇱🇺"), ("MT", "Malta 🇲🇹"), ("MD", "Moldova 🇲🇩"), ("ME", "Montenegro 🇲🇪"),
+    ("NL", "Netherlands 🇳🇱"), ("MK", "North Macedonia 🇲🇰"), ("NO", "Norway 🇳🇴"),
+    ("PL", "Poland 🇵🇱"), ("PT", "Portugal 🇵🇹"), ("RO", "Romania 🇷🇴"), ("RS", "Serbia 🇷🇸"),
+    ("SK", "Slovakia 🇸🇰"), ("SI", "Slovenia 🇸🇮"), ("ES", "Spain 🇪🇸"), ("SE", "Sweden 🇸🇪"),
+    ("CH", "Switzerland 🇨🇭"), ("TR", "Turkey 🇹🇷"), ("UA", "Ukraine 🇺🇦"), ("GB", "United Kingdom 🇬🇧"),
+    ("US", "United States 🇺🇸"), ("CA", "Canada 🇨🇦"), ("AU", "Australia 🇦🇺"), ("NZ", "New Zealand 🇳🇿"),
+    ("JP", "Japan 🇯🇵"), ("KR", "South Korea 🇰🇷"), ("CN", "China 🇨🇳"), ("IN", "India 🇮🇳"),
+    ("BR", "Brazil 🇧🇷"), ("MX", "Mexico 🇲🇽"), ("AR", "Argentina 🇦🇷"), ("ZA", "South Africa 🇿🇦"),
+    ("AE", "United Arab Emirates 🇦🇪"), ("SA", "Saudi Arabia 🇸🇦"), ("SG", "Singapore 🇸🇬"),
+]
